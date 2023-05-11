@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-    <title>Retro City</title>
-    <style>
-		div {
-		color: black;
-        position:absolute;
-        bottom: 1px;
-        right: 25px;
-        width: 250px;
-        height: 80px;
-        padding:1px;
-		padding-top:5px;
-		padding-bottom:10px;
-        padding-left:5px;
-        font-size:20px;
-        background-color:#e97e37f8;
-        box-shadow: 10px 10px #ae83b3f8;
-	
-      }
-    </style>
+	<title>Retro City</title>
+	<style>
+		.detail {
+			position: relative;
+		}
+		
+		img {
+			display: block;
+			width: 100%;
+		}
+		
+		.text-box {
+			position: absolute;
+		    bottom:15px;
+            right: 25px;
+            width: 250px;
+            font-size:20px;
+			background-color:#e97e37f8;
+			padding: 20px;
+			box-shadow: 10px 10px 0px #ae83b3f8;
+		}
+	</style>
 </head>
 <body>
-    <img src="C:\Users\Hp\Downloads\2734813.jpg" height="100%" width="100%" alt="This is a image">
-    <div><p><b>Welcome to the Retro City,Feel like a master of the game-world.</b></p></div>
+	<div class="detail">
+		<img src="https://github.com/CC-BHU/web-development/raw/main/assets/images/task2.jpg"  alt="Retro City">
+		<div class="text-box">
+			<p>Welcome to the Retro city, feel like a game?</p>
+		</div>
+	</div>
 </body>
 </html>
