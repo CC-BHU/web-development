@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task 7
+    </title>
+    <style>
+      .navbar {
+        background-color: lightblue;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+      }
+      .navbar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+      }
+      .navbar li {
+        margin-right: 10px;
+      }
+      .navbar a {
+        text-decoration: none;
+        color: black;
+        padding: 8px 12px;
+        border-radius: 5px;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdownclick {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown:hover{
+        background-color: orange;
+      }
+      .dropdownclick:active{
+        background-color: orange;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: lightblue;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 5px 5px black;
+      }
+      .dropdownc-content {
+        display: none;
+        position: absolute;
+        background-color: lightblue;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 5px 5px black;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+        background-color: beige;
+      }
+      .dropdownclick:active .dropdownc-content {
+        display: block;
+        background-color: beige;
+      }
+      .dropdown-content a {
+        display: block;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .dropdown-content a:hover {
+        background-color: pink;
+      }
+      .dropdownc-content a:active {
+        display: inline;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li class="dropdown">
+          <a href="#">Hover
+          </a>
+          <div class="dropdown-content">
+            <a href="https://github.com/ATiwari2000">Profile
+            </a>
+            <a href="https://github.com/CC-BHU">Coding Club
+            </a>
+            <a href="https://github.com/ATiwari2000/web-development">Repository
+            </a>
+          </div>
+        </li>
+        <li class="dropdownclick">
+          <a href="#">Click
+          </a>
+          <div class="dropdownc-content">
+            <a href="https://github.com/ATiwari2000">Profile
+            </a>
+            <a href="https://github.com/CC-BHU">Coding Club
+            </a>
+            <a href="https://github.com/ATiwari2000/web-development">Repository
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
