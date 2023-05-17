@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form">
+        <form method="POST">
+            <h1>Contact Information</h1><hr><br>
+            <p>Name:<input type="text" name="name" required></p>
+            <p>Date Of Birth:<input type="date" name="DOB" required></p>
+        <fieldset> 
+            <legend>Gender</legend>
+            <p>Male <input type="radio" name="gender" required></p>
+            <p>Female<input type="radio" name="gender" required></p>
+            <p>Others <input type="radio" name="gender" required></p>
+        </fieldset> 
+        <p>Select Your Tech Interests: <br>
+            <input type="checkbox" name="ai">Artificial Intelligence <br>
+            <input type="checkbox" name="ml" >Machine Learning <br>
+            <input type="checkbox" name="cloud">Cloud Computing <br>
+            <input type="checkbox" name="webd">Web Development <br>
+            <input type="checkbox" name="mobile" >Mobile <br>
+            <input type="checkbox" name="devops">Dev Ops <br>
+            <input type="checkbox" name="system">System
+        </p>
+        <p>Email: <input type="email" name="email" placeholder="xyz@mail.com"></p>
+        <p>Phone Number:<input type="number" name="" placeholder="5432167890"></p>
+        <p>Choose Security Question:
+            <select name="security" required>
+                <option value="">--Select--</option>
+                <option value="book">What is your favourite book?</option>
+                <option value="name">What is your nickname?</option>
+                <option value="birth">What is your birth town?</option>
+                <option value="other">Others</option>
+            </select>
+        </p>
+        <p>Tell Me About Yourself: <br><textarea name="person" id="1" cols="50" rows="5"></textarea></p>
+        <p>Upload Your Resume here: <input type="file" name="resume"></p>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
