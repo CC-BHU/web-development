@@ -13,7 +13,6 @@
         .navbar {
             background-color: bisque;
             border-radius: 10px;
-            padding: 10px;
             display: flex;
         }
 
@@ -27,6 +26,7 @@
 
         .navbar li {
             margin-right: 10px;
+            padding: 25px;
         }
 
         .navbar a {
@@ -52,7 +52,7 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            top: 27px;
+            top: 68px;
             box-shadow: 2px solid lightpink;
             background-color: lightblue;
             border-radius: 10px;
@@ -89,11 +89,15 @@
         .dropdownc-content {
             display: none;
             position: absolute;
-            top: 27px;
+            top: 68px;
             background-color: lightblue;
             border-radius: 10px;
             padding: 10px;
             box-shadow: 5px 5px gray;
+        }
+
+        .show {
+            display: block;
         }
 
         .dropdownc-content a {
@@ -120,9 +124,9 @@
                     <a href="https://github.com/ghost-git24/web-development">Repository</a>
                 </div>
             </li>
-            <li class="dropdownclick">
+            <li class="dropdownclick" id="dropdownnn">
                 <a href="#">Click</a>
-                <div class="dropdownc-content">
+                <div id="dp" class="dropdownc-content">
                     <a href="https://github.com/ghost-git24">Profile</a>
                     <a href="https://github.com/CC-BHU">Coding Club</a>
                     <a href="https://github.com/ghost-git24/web-development">Repository</a>
@@ -130,23 +134,20 @@
             </li>
         </ul>
     </nav>
+
     <script>
-        const dropdown = document.querySelector('.dropdownclick');
-        const dropdownContent = document.querySelector('.dropdownc-content');
-        dropdown.addEventListener('click', function (event) {
-            this.classList.toggle('active');
-            event.stopPropagation();
-        }
-        );
-        document.addEventListener('click', function () {
-            dropdown.classList.remove('active');
-        }
-        );
-        dropdownContent.addEventListener('click', function (event) {
-            event.stopPropagation();
-        }
-        );
+        const d = document.getElementById("dropdownnn");
+        d.addEventListener('click', function () {
+            const dp = document.getElementById("dp");
+            if (dp.classList.contains("show")) {
+                dp.classList.remove("show");
+            }
+            else {
+                dp.classList.add("show");
+            }
+        })
     </script>
+
 </body>
 
 </html>
