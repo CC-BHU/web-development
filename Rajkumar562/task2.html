@@ -2,19 +2,17 @@
 <html>
 <head>
 <style> 
-div {
-position: absolute;
+.upper {
+position: relative;
 padding: 5px;
-width: 100px;
-height: 100px;
 }
 .retro{
   height:100%;
   width:100%;
 }
 .text {
+  position:absolute;
   text-align:center;
-  bottom:100px;
   width: 200px;
   height: 80px;  
   padding: 10px;
@@ -31,11 +29,9 @@ right: 50px;
 </style>
 </head>
 <body>
-  <div></div>
+  <div class="upper">
   <img class="retro" src="https://github.com/CC-BHU/web-development/raw/main/assets/images/task2.jpg" alt="retro city img">
 <div class="text">Welcome to the Retro City, looks mesmerising isn't it?</div>
-
+</div>
 </body>
 </html>
-
-
