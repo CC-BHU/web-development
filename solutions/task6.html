@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task 6</title>
+</head>
+
+<body>
+    <button onclick="increaseCounter()">Click Me</button>
+    <label id="counter"></label>
+</body>
+<script>
+    let i = 0;
+    let counter = document.getElementById("counter");
+    counter.innerHTML = i;
+
+    function increaseCounter() {
+        i++;
+        counter.innerHTML = i;
+    }
+</script>
+
+</html>

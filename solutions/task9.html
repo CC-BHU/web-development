@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task 9</title>
+    <style>
+        .container {
+            height: 100vh;
+            /* display: flex; */
+            align-items: center;
+            text-align: center;
+        }
+
+        td {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="avatar">
+            <img src="#" id="avatar" style="width: 200px; height: 200px; border-radius: 15%;">
+        </div>
+        <h3 id="name"></h3>
+        <p id="bio">bio</p>
+        <table style="margin: auto; text-align: left;">
+            <tr>
+                <td>Age</td>
+                <td id="age"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td id="gender"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td id="email"></td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td id="location"></td>
+            </tr>
+            <tr>
+                <td>Occupation</td>
+                <td id="occupation"></td>
+            </tr>
+            <tr>
+                <td>Hobbies</td>
+                <td id="hobbies"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    fetch("https://cc-bhu.github.io/web-development/assets/api/person.json")
+        .then(response => response.json())
+        .then(data => {
+            for (let item in data) {
+                if (item == "avatar") {
+                    document.getElementById(item).src = data[item];
+                } else {
+                    document.getElementById(item).innerHTML = data[item];
+                }
+            }
+        });
+
+</script>
+
+</html>

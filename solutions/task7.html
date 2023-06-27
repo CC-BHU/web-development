@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Task 7</title>
+</head>
+<style>
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightcoral;
+    border-radius: 10px;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a,
+  .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+  }
+
+  li a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: deepskyblue;
+  }
+
+  li.dropdown-hover {
+    display: inline-block;
+  }
+
+  li.dropdown-click {
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dropdown-hover:hover .dropdown-content {
+    display: block;
+  }
+</style>
+</head>
+
+<body>
+
+  <ul>
+    <li class="dropdown dropdown-hover">
+      <a href="javascript:void(0)" class="dropbtn">Hover</a>
+      <div class="dropdown-content">
+        <a href="https://github.com/CC-BHU">Profile</a>
+        <a href="https://github.com/CC-BHU/">Coding Club</a>
+        <a href="https://github.com/CC-BHU/web-development/">Repository</a>
+      </div>
+    </li>
+    <li class="dropdown dropdown-click">
+      <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">Click</a>
+      <div id="btnDropdown" class="dropdown-content" style="display: none;">
+        <a href="https://github.com/CC-BHU">Profile</a>
+        <a href="https://github.com/CC-BHU/">Coding Club</a>
+        <a href="https://github.com/CC-BHU/web-development/">Repository</a>
+      </div>
+    </li>
+  </ul>
+</body>
+<script>
+  const dropdown = document.getElementById("btnDropdown");
+  function toggleDropdown() {
+    if (dropdown.style.display == "none") {
+      dropdown.style.display = 'block';
+    } else {
+      dropdown.style.display = "none";
+    }
+  }
+</script>
+
+</html>

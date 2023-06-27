@@ -1,0 +1,63 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <form>
+        <label for="function">Function</label>
+        <select name="function" id="function" required>
+            <option value="linear">Linear (x)</option>
+            <option value="inverse">Inverse (1/x)</option>
+            <option value="log">Log (log x)</option>
+        </select>
+        <br></br>
+        <label for="number">Number</label>
+        <input type="number" name="number" id="number" placeholder="Enter your number" required>
+
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <label for="result">Result</label>
+    <input type="number" name="result" id="result" placeholder="Result" disabled>
+
+    <br>
+    <p>JSON Response</p>
+    <pre id="codeBlock">
+
+        </pre>
+</body>
+<script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const jsonData = Object.fromEntries(data);
+
+        switch (jsonData.function) {
+            case 'linear':
+                result = jsonData.number;
+                break;
+            case 'inverse':
+                if (jsonData.number == 0) {
+                    alert("Cannot divide by zero");
+                    return;
+                }
+                result = 1 / jsonData.number;
+                break;
+            case 'log':
+                if (jsonData.number <= 0) {
+                    alert("Cannot take log of zero or negative number");
+                    return;
+                }
+                result = Math.log(jsonData.number);
+                break;
+        }
+        jsonData.result = result
+        document.getElementById("result").value = result;
+        document.getElementById("codeBlock").innerHTML = JSON.stringify(jsonData, null, 2);
+    });
+</script>
+
+</html>
