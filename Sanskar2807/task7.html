@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task 7</title>
+    <style>
+      .navbar {
+        background-color: lightblue;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar li {
+        margin-right: 10px;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: black;
+        padding: 8px 12px;
+        border-radius: 5px;
+      }
+
+      .dropdown,
+      .dropdownclick {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown:hover,
+      .dropdownclick:hover {
+        background-color: orange;
+      }
+
+      .dropdown-content,
+      .dropdownc-content {
+        display: none;
+        position: absolute;
+        top: 27px;
+        background-color: lightblue;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 5px 5px bisque;
+      }
+
+      .dropdown:hover .dropdown-content,
+      .dropdownclick.active .dropdownc-content {
+        display: block;
+        background-color: beige;
+      }
+
+      .dropdown-content a,
+      .dropdownc-content a {
+        display: block;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .dropdown-content a:hover,
+      .dropdownc-content a:hover {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li class="dropdown">
+          <a href="#">Hover</a>
+          <div class="dropdown-content">
+            <a>Profile</a>
+            <a>Coding Club</a>
+            <a>Repository</a>
+          </div>
+        </li>
+        <li class="dropdownclick">
+          <a href="#">Click</a>
+          <div class="dropdownc-content">
+            <a>Profile</a>
+            <a>Coding Club</a>
+            <a>Repository</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      const dropdowns = document.querySelectorAll('.dropdownclick');
+
+      dropdowns.forEach((dropdown) => {
+        const dropdownContent = dropdown.querySelector('.dropdownc-content');
+
+        dropdown.addEventListener('click', function (event) {
+          this.classList.toggle('active');
+          event.stopPropagation();
+        });
+
+        document.addEventListener('click', function () {
+          dropdown.classList.remove('active');
+        });
+
+        dropdownContent.addEventListener('click', function (event) {
+          event.stopPropagation();
+        });
+      });
+    </script>
+  </body>
+</html>
