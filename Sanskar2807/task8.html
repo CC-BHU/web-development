@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 8</title>
+  <style>
+    /* Center the image */
+    body, html {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Add border on hover */
+    img:hover {
+      border: 2px solid #000;
+      transition: border-color 0.3s ease;
+    }
+
+    /* Modal styles */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    .modal-content {
+      width: 50%;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+    }
+
+    .modal-header {
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .modal-body {
+      margin-top: 20px;
+    }
+
+    .modal-footer {
+      margin-top: 20px;
+      text-align: right;
+    }
+
+    .modal-footer button {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://raw.githubusercontent.com/CC-BHU/web-development/main/assets/images/task8.jpg" alt="Dahlia Flower" onclick="openModal()">
+  
+  <div id="modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        Red Dahlia Flower
+      </div>
+      <div class="modal-body">
+        <p>This is a rare flower.</p>
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeModal()">Close</button>
+        <button onclick="downloadImage()">Download</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Open the modal
+    function openModal() {
+      document.getElementById("modal").style.display = "flex";
+    }
+
+    // Close the modal
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    // Perform download functionality
+    function downloadImage() {
+      // Add your download code here
+      alert("Download button clicked");
+    }
+  </script>
+</body>
+</html>
